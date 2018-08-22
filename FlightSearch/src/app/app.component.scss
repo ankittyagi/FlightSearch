@@ -1,0 +1,33 @@
+@import '~styles/style';
+.main {
+   width: auto;
+   height: 100%;
+   header {
+      padding: 20px 0px 20px 20px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+      background: #1976d2;
+      color:white;
+      h1 {
+         display: inline;
+         font-size: 25px;
+      }
+   }
+   .container {
+      display: flex;
+      flex-direction: column;
+      .sub_container {
+         flex: 2;
+      }
+      .right {
+         flex: 6;
+      }
+   }
+}
+@media (min-width: $media-sm) {
+   .main {
+      .container {
+         flex-direction: row;
+      }
+   }
+
+}
