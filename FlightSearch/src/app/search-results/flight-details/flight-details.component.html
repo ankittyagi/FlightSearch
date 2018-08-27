@@ -1,7 +1,24 @@
 
-<div class="flight_details">
+<div class="flight_details box_shadow">
   <div class="flight_details_container">
-    <h4><b>John Doe</b></h4> 
-    <p>Blah & Blah</p> 
+   <div class="book_flight">
+      <img src='../assets/images/plane.png' />
+      <input type="button" class="button" value="{{labels.bookFlight}}">
+   </div>
+   <div>
+      <div class="amount">Rs {{(onwardFlight.cost + returnFlight?.cost) * numberOfPassengers}}</div>
+      <section class="flight_id">{{onwardFlight.flightID}}</section>
+      <section>{{onwardFlight.departure | cityCode}} > {{onwardFlight.destination | cityCode}}</section> 
+      <section>Time: {{onwardFlight.time.departure | timeOnlyFormat}} - {{onwardFlight.time.destination | timeOnlyFormat}}</section>
+      <section>Rs {{onwardFlight.cost}}</section>
+   </div>
+   <div *ngIf="returnFlight">
+      <div [style.visibility]="'hidden'" class="amount">Rs {{(onwardFlight.cost + returnFlight?.cost) * numberOfPassengers}}</div>
+      <section class="flight_id">{{returnFlight.flightID}}</section>
+      <section>{{returnFlight.departure | cityCode}} > {{returnFlight.destination | cityCode}}</section> 
+      <section>Time: {{returnFlight.time.departure | timeOnlyFormat}} - {{returnFlight.time.destination | timeOnlyFormat}}</section>
+      <section>Rs {{returnFlight.cost}}</section>
+   </div>
+   
   </div>
 </div>

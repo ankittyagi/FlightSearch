@@ -1,13 +1,21 @@
-export interface Flights {
+import { Booking } from './booking';
+export interface Flight {
    flightID: string;
    departure: string;
-   arrival: string;
+   destination: string;
    time: ArrivalDepartureTime;
-   date: string;
    cost: number;
 }
 
 interface ArrivalDepartureTime {
-   departureTime: string;
-   arrivaltime: string;
+   departure: string;
+   destination: string;
+}
+
+export interface FlightSearchParameters {
+   booking: Booking;
+   onwardFlights: Flight[];
+   returnFlights?: Flight[];
+   return: Boolean;
+   limit: number;
 }

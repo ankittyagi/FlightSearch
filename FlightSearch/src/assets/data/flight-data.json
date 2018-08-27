@@ -1,0 +1,475 @@
+{
+	"flights": [
+		{
+			"flightID": "AL-201",
+			"departure": "Kolkata",
+			"destination": "Delhi",
+         "cost": "2800",
+         "time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+      {
+			"flightID": "AL-301",
+			"departure": "Kolkata",
+			"destination": "Delhi",
+         "cost": "3400",
+         "time": {
+				"departure": "2018-08-26 02:00:00",
+				"destination": "2018-08-26 04:00:00"
+			}
+      },
+      {
+			"flightID": "AL-301",
+			"departure": "Kolkata",
+			"destination": "Delhi",
+         "cost": "2000",
+         "time": {
+				"departure": "2018-08-26 13:00:00",
+				"destination": "2018-08-26 16:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Kolkata",
+			"destination": "Mumbai",
+         "cost": "2500",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Kolkata",
+			"destination": "Banglore",
+         "cost": "2200",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Kolkata",
+			"destination": "Jammu",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-210",
+			"departure": "Delhi",
+			"destination": "Kolkata",
+         "cost": "8400",
+         "time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+      {
+			"flightID": "AL-210",
+			"departure": "Delhi",
+			"destination": "Kolkata",
+         "cost": "6400",
+         "time": {
+				"departure": "2018-08-26 13:00:00",
+				"destination": "2018-08-26 16:00:00"
+			}
+      },
+      {
+			"flightID": "AL-211",
+			"departure": "Delhi",
+			"destination": "Kolkata",
+         "cost": "2400",
+         "time": {
+				"departure": "2018-08-26 02:00:00",
+				"destination": "2018-08-26 04:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Delhi",
+			"destination": "Mumbai",
+         "cost": "2200",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Delhi",
+			"destination": "Banglore",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Delhi",
+			"destination": "Jammu",
+         "cost": "2000",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-201",
+			"departure": "Jammu",
+			"destination": "Delhi",
+         "cost": "2000",
+         "time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Jammu",
+			"destination": "Mumbai",
+         "cost": "2500",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Jammu",
+			"destination": "Banglore",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Jammu",
+			"destination": "Kolkata",
+         "cost": "2400",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-201",
+			"departure": "Mumbai",
+			"destination": "Delhi",
+         "cost": "2200",
+         "time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Mumbai",
+			"destination": "Jammu",
+         "cost": "2500",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Mumbai",
+			"destination": "Banglore",
+         "cost": "2400",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Mumbai",
+			"destination": "Kolkata",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-201",
+			"departure": "Banglore",
+			"destination": "Delhi",
+         "cost": "2400",
+         "time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Banglore",
+			"destination": "Mumbai",
+         "cost": "2000",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Banglore",
+			"destination": "Jammu",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Banglore",
+			"destination": "Kolkata",
+         "cost": "2200",
+			"time": {
+				"departure": "2018-08-26 08:00:00",
+				"destination": "2018-08-26 12:00:00"
+			}
+      },
+      
+      {
+			"flightID": "AL-201",
+			"departure": "Kolkata",
+			"destination": "Delhi",
+         "cost": "2000",
+         "time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+      },
+      {
+			"flightID": "AL-301",
+			"departure": "Kolkata",
+			"destination": "Delhi",
+         "cost": "2000",
+         "time": {
+				"departure": "2018-08-25 02:00:00",
+				"destination": "2018-08-25 04:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Kolkata",
+			"destination": "Mumbai",
+         "cost": "2500",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Kolkata",
+			"destination": "Banglore",
+         "cost": "2200",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Kolkata",
+			"destination": "Jammu",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-210",
+			"departure": "Delhi",
+			"destination": "Kolkata",
+         "cost": "2400",
+         "time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+      },
+      {
+			"flightID": "AL-211",
+			"departure": "Delhi",
+			"destination": "Kolkata",
+         "cost": "2400",
+         "time": {
+				"departure": "2018-08-25 02:00:00",
+				"destination": "2018-08-25 04:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Delhi",
+			"destination": "Mumbai",
+         "cost": "2200",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Delhi",
+			"destination": "Banglore",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Delhi",
+			"destination": "Jammu",
+         "cost": "2000",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-201",
+			"departure": "Jammu",
+			"destination": "Delhi",
+         "cost": "2000",
+         "time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Jammu",
+			"destination": "Mumbai",
+         "cost": "2500",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Jammu",
+			"destination": "Banglore",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Jammu",
+			"destination": "Kolkata",
+         "cost": "2400",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-201",
+			"departure": "Mumbai",
+			"destination": "Delhi",
+         "cost": "2200",
+         "time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Mumbai",
+			"destination": "Jammu",
+         "cost": "2500",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Mumbai",
+			"destination": "Banglore",
+         "cost": "2400",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Mumbai",
+			"destination": "Kolkata",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+      },
+
+      {
+			"flightID": "AL-201",
+			"departure": "Banglore",
+			"destination": "Delhi",
+         "cost": "2400",
+         "time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-202",
+			"departure": "Banglore",
+			"destination": "Mumbai",
+         "cost": "2000",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-203",
+			"departure": "Banglore",
+			"destination": "Jammu",
+         "cost": "2700",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		},
+		{
+			"flightID": "AL-204",
+			"departure": "Banglore",
+			"destination": "Kolkata",
+         "cost": "2200",
+			"time": {
+				"departure": "2018-08-25 08:00:00",
+				"destination": "2018-08-25 12:00:00"
+			}
+		}
+
+
+	]
+}

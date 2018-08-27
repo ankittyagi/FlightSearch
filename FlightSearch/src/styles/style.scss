@@ -1,2 +1,78 @@
 @import './_variables';
 @import './_mixins';
+
+.box_shadow {
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   transition: 0.3s;
+   &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   }
+}
+.tab_button {
+   cursor: pointer;
+   padding: 10px 20px;
+   border-bottom: none;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   &:hover {
+      background-color: $color-Hover;
+   }
+   &.active {
+      background-color: $color-Blue;
+      color: $color-White;
+   }
+   &:focus {
+      outline: none;
+   }
+}
+.button {
+   margin: auto;
+   display: block;
+   background-color: $color-Green;
+   color: $color-White;
+   padding: 10px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 4px;
+   &:disabled {
+      background-color: $color-Grey;
+   }
+}
+
+.slidecontainer {
+   width: 100%;
+   margin-top: 20px;
+}
+
+.slider {
+   -webkit-appearance: none;
+   width: 100%;
+   height: 8px;
+   background: $color-Grey;
+   outline: none;
+   opacity: 0.8;
+   -webkit-transition: .2s;
+   -webkit-transition: opacity .2s;
+   transition: opacity .2s;
+   border-radius: 10px;
+   border: 1px solid $color-LightGrey;
+   &:hover {
+      opacity: 1;
+   }
+   &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: $color-Green;
+      cursor: pointer;
+   }
+   &::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: $color-Green;
+      cursor: pointer;
+   }
+}

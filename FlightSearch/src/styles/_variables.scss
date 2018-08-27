@@ -8,16 +8,20 @@ $font-xsm: $font-default - 4px;
 $font-md: $font-default + 2px;
 $font-lg: $font-default + 4px;
 $font-xlg: $font-default + 6px;
-
-$footer-height-xxs: 176px;
-$footer-height-xs: 156px;
-$footer-height-sm: 123px;
-$footer-height-md: 101px;
-$footer-height-lg: 85px;
+$font-xxlg: $font-default + 8px;
 
 $media-xlg: 1920px;
 $media-lg: 1440px;
 $media-md: 1024px;
 $media-sm: 768px;
+$media-sm1: 550px;
 $media-xs: 375px;
 $media-xxs: 320px;
+
+$color-Red: #ff0000;
+$color-Green: #4CAF50;
+$color-Blue: #1976d2;
+$color-White: #ffffff;
+$color-LightGrey: #f1f1f1;
+$color-Grey: #808080;
+$color-Hover: #ddd

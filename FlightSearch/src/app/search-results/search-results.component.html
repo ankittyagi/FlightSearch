@@ -1,8 +1,20 @@
-<div class="result_container">
-   <h2>Flights</h2>
-   <app-flight-details></app-flight-details>
-   <app-flight-details></app-flight-details>
-   <app-flight-details></app-flight-details>
-   <app-flight-details></app-flight-details>
-   <app-flight-details></app-flight-details>
+<div class="result_container box_shadow">
+   <div *ngIf="flightSearchParameters; else noSearch">
+      <h2 *ngIf="flightSearchParameters.return">{{departureCity + ' > ' + destinationCity + ' > ' + departureCity }}</h2>
+      <h2 *ngIf="!flightSearchParameters.return">{{departureCity + ' > ' + destinationCity}}</h2>
+      <div *ngFor="let onwardFlight of flightSearchParameters.onwardFlights">
+         <div *ngIf="flightSearchParameters.return; else oneWay">
+            <div *ngFor="let returnFlight of flightSearchParameters.returnFlights">
+               <div *ngIf="checkFlight(onwardFlight, returnFlight)">
+                  <app-flight-details [onwardFlight]="onwardFlight" [returnFlight]="returnFlight" [numberOfPassengers]="numberOfPassengers"></app-flight-details>
+               </div>
+            </div>
+         </div>
+         <ng-template #oneWay>
+            <app-flight-details *ngIf="checkFlight(onwardFlight)" [onwardFlight]="onwardFlight" [numberOfPassengers]="numberOfPassengers"></app-flight-details>
+         </ng-template>
+   </div>
+   <ng-template #noSearch>
+      <h2>{{labels.searchSomething}}</h2>
+   </ng-template>
 </div>

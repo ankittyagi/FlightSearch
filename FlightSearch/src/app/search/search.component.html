@@ -1,12 +1,82 @@
-<div class="search_container">
-   <p>This is search container</p>
-   <div class="tab">
-         <button id="oneway" [class.active]="!returnJourney"  (click)="selectJourneyType()">One Way</button>
-         <button id="return" [class.active]="returnJourney" (click)="selectJourneyType()">Return</button>
-   </div>
-   <div class="search_inputs">
+<div class="search_container box_shadow">
 
+   <div class="tab">
+         <button class="tab_button" [class.active]="!returnJourney"  (click)="selectJourneyType()">{{labels.oneWay}}</button>
+         <button class="tab_button" [class.active]="returnJourney" (click)="selectJourneyType()">{{labels.return}}</button>
    </div>
+
+   <div class="search_form">
+      <form #searchForm="ngForm" (ngSubmit)="onFormSubmit(searchForm)">
+
+            <!-- Departure  -->
+
+            <input autocomplete="off" (keyup)="selectDepartureCity($event.target.value)" list="departureCitiesList" type="text" 
+               class="form-control" required #departureCity="ngModel" placeholder="Enter departure City" id="departureCity" 
+               [(ngModel)]="booking.departureCity"  (focus)="emptyDepartureCity()" (blur)="selectDepartureCity($event.target.value)" 
+               name="departureCity" />
+            <datalist id="departureCitiesList">
+                  <option *ngFor="let city of departureCities" [value]="city">
+            </datalist>
+            <div *ngIf="departureCity.invalid && (departureCity.dirty || departureCity.touched)" class="validation-message">
+               <span class="error">{{labels.provideValidInput}}</span>
+            </div>
+            
+            <!-- Destination -->
+
+            <input autocomplete="off"  (keyup)="selectDestinationCity($event.target.value)" list="destinationCitiesList" type="text"
+               class="form-control" required #destinationCity="ngModel" name="destinationCity" placeholder="Enter destination City"
+               id="destinationCity" [(ngModel)]="booking.destinationCity" (focus)="emptyDestinationCity()"/>
+            <datalist id="destinationCitiesList" >
+               <option *ngFor="let city of destinationCities" [value]="city">
+            </datalist>
+            <div *ngIf="destinationCity.invalid && (destinationCity.dirty || destinationCity.touched)" class="validation-message">
+               <span class="error">{{labels.provideValidInput}}</span>
+            </div>
+
+            <!-- Start Date -->
+
+            <input type="date" class="form-control" required #departureDate="ngModel" data-placeholder="Departure Date" id="departdate" 
+               [(ngModel)]="booking.departureDate" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="departureDate" 
+               min="2018-08-01" max="2018-08-31" required aria-required="true" (ngModelChange)="startDateSelected($event)"/>
+            <div *ngIf="departureDate.invalid && (departureDate.dirty || departureDate.touched)" class="validation-message">
+               <span class="error">{{labels.provideValidInput}}</span>
+            </div>
+         
+            <!-- Return Date -->
+
+            <div *ngIf="returnJourney">
+               <input type="date" class="form-control" required #returnDate="ngModel" data-placeholder="Return Date" id="returnDate" 
+                  [(ngModel)]="booking.returnDate" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="returnDate" 
+                  [min]="booking.departureDate" max="2018-08-31" aria-required="true"/>
+               <div *ngIf="returnDate.invalid && (returnDate.dirty || returnDate.touched)" class="validation-message">
+                  <span class="error">{{labels.provideValidInput}}</span>
+                  </div>
+            </div>
+
+            <!-- Number of Passengers -->
+
+            <input type="number" appValidateInput validateFor='number' class="form-control" required #passengers="ngModel" min=1 placeholder="Passengers" id="passengers" 
+               [(ngModel)]="booking.numberOfPassengers" name="passengers" />
+            <div *ngIf="passengers.invalid && (passengers.dirty || passengers.touched)" class="validation-message">
+               <span class="error">{{labels.provideValidInput}}</span>
+            </div>
+
+            <!-- Submit -->
+
+            <input class="button" type="submit" id="search" name="search" value="Search" />
+            <div *ngIf="invalidForm" class="validation-message">
+               <span class="error">{{labels.invalidFormData}}</span>
+            </div>
+      </form>
+   </div>
+
+   <!-- Refine search -->
+   <div class="range-heading">{{labels.refineSearch}}</div>
+   <div class="slidecontainer">
+      <input  #ranger type="range" min="1000" max="10000" value="5000" step="500" class="slider" id="ranger" (input)="changeRangeValue(ranger.value)" />
+      <p>{{labels.ruppeeSign}} <span>{{amountLimitValue}}</span></p>
+   </div>
+
 </div>
 
 

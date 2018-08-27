@@ -1,36 +1,59 @@
+@import '~styles/style';
+
 .search_container {
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   transition: 0.3s;
    margin: 10px;
    padding: 10px;
    height: 100%;
-   flex-grow: 2;
-   &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-   }
-
+   @include flex-grow(2);
    .tab{
       overflow: hidden;
-      background-color: #f1f1f1;
-      width: fit-content;
-      button {
-         background-color: inherit;
-         float: left;
-         cursor: pointer;
-         padding: 14px 16px;
-         &:hover {
-            background-color: #ddd;
+   }
+   .search_form{
+      background-color: $color-LightGrey;
+      padding: 10px 10px;
+      input{
+         &[type]:not([type=submit]) {
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            width: 100%;
          }
-         &.active {
-            background-color: #1976d2;
-            color:white;
+         &[type=submit]{
+            width: 100%;
+         }
+      }
+      .validation-message { 
+         text-align: center;
+         .error{
+            color: $color-Red;
+            font-size: $font-xsm;
          }
       }
    }
-   .search_inputs{
-      background-color: #f1f1f1;
-      height: 100%;
-      padding: 10px 10px;
+   .range-heading {
+      margin-top: 20px;
+   }
+}
 
+@media (min-width: $media-xs) {
+   .search_container {
+      .search_form {
+         input{
+            &[type=submit]{
+               width: 50%;
+            }
+         }
+      }
+   }
+}
+@media (min-width: $media-sm) {
+   .search_container {
+      .search_form {
+         input{
+            &[type=submit]{
+               width: 100%;
+            }
+         }
+      }
    }
 }

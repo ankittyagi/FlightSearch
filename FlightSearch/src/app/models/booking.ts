@@ -1,9 +1,8 @@
 export interface Booking {
    departureCity: string;
    departureDate: string;
-   arrivalCity: string;
+   destinationCity: string;
    numberOfPassengers: number;
-   return: boolean;
+   return: Boolean;
    returnDate?: string;
-   refine?: number;
 }
