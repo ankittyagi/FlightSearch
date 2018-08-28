@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FlightDetailsComponent } from './flight-details.component';
+import { TimeOnlyFormatPipe } from './../../shared/pipes/time-only-format.pipe';
+import { CityCodePipe } from '../../shared/pipes/city-code.pipe';
+
+import { FormsModule } from '../../../../node_modules/@angular/forms';
+
 
 describe('FlightDetailsComponent', () => {
   let component: FlightDetailsComponent;
@@ -8,7 +13,8 @@ describe('FlightDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FlightDetailsComponent ]
+      imports: [FormsModule],
+      declarations: [ FlightDetailsComponent, CityCodePipe, TimeOnlyFormatPipe ],
     })
     .compileComponents();
   }));
@@ -16,6 +22,21 @@ describe('FlightDetailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FlightDetailsComponent);
     component = fixture.componentInstance;
+    component.forwardFlight = {
+      flightID: '',
+      departure: '',
+      destination: '',
+      time: {departure: '', destination: ''},
+      cost: 0
+      };
+    component.returnFlight = {
+      flightID: '',
+      departure: '',
+      destination: '',
+      time: {departure: '', destination: ''},
+      cost: 0
+      };
+    component.numberOfPassengers = 1;
     fixture.detectChanges();
   });
 

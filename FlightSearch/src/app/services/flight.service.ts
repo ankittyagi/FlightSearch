@@ -1,50 +1,70 @@
+
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Flight, FlightSearchParameters } from '../models/flights';
 import { Booking } from '../models/booking';
 import 'rxjs/add/operator/toPromise';
 import { Constants } from '../utils/constants';
+import { ApiService } from './api.service';
 
 @Injectable()
 export class FlightService {
    labels = Constants.labels;
-   constructor(private http: Http) { }
+   constructor(private apiService: ApiService) { }
 
-   public searchFlights(booking: Booking, limit): Promise<FlightSearchParameters> {
-      return this.http.get(this.labels.apiUrl).toPromise().then(data => {
-         return {
+   /**
+   * Search flights and return object of all  search param
+   * @param booking: flight booking info
+   * @param limit: cost limit
+   */
+   public searchFlights(booking: Booking, limit: number): Promise<FlightSearchParameters> {
+      return this.apiService.getAll().then(flights => {
+         const ob: FlightSearchParameters = {
             limit: limit,
             booking: booking,
-            onwardFlights: this.getFlights(data.json(), booking, false),
+            forwardFlights: this.sortAndFilterFlights(flights, booking, false),
             return: booking.return,
-            returnFlights: booking.return ? this.getFlights(data.json(), booking, true) : null
+            returnFlights: booking.return ? this.sortAndFilterFlights(flights, booking, true) : null
          };
+         return Promise.resolve(ob);
       }).catch(Promise.reject);
    }
 
+   /**
+   * Search flights and return all unique departure city list
+   */
    public getCities(): Promise<string[]> {
-      return this.http.get(this.labels.apiUrl)
-         .toPromise()
-         .then(data => {
+      return this.apiService.getAll().then(data => {
             const allCities = new Set();
-            data.json().flights.map(x => {
+            data.map(x => {
                allCities.add(x.departure);
             });
             return Promise.resolve(Array.from(allCities));
-         })
-         .catch(Promise.reject);
+         }).catch(Promise.reject);
    }
 
-   private getFlights(data: any, booking: Booking, returnFlight = false): Flight[] {
-      data.flights.map(flight => flight.cost = parseInt(flight.cost, 10));
-      const flights: Flight[] = data.flights;
+   /**
+   * Sort flights as per cost
+   * @param flights: all flights list
+   * @param booking: flight booking info
+   * @param returnFlight: if return flight
+   */
+
+   private sortAndFilterFlights(flights: Flight[], booking: Booking, returnFlight: Boolean = false): Flight[] {
+      flights.forEach(flight => flight.cost = parseInt(String(flight.cost), 10));
       flights.sort((x, y) => {
          return x.cost - y.cost;
       });
       return this.filterFlights(flights, booking, returnFlight);
    }
 
-   private filterFlights(flights: Flight[], booking: Booking, returnFlight: Boolean = false): Flight[] {
+   /**
+   * Filter flights as date, departure and destination city
+   * @param flights: all flights list
+   * @param booking: flight booking info
+   * @param returnFlight: if return flight
+   */
+
+   private filterFlights(flights: Flight[], booking: Booking, returnFlight: Boolean): Flight[] {
       const filteredFlights: Flight[] = [];
       if (returnFlight) {
          flights.map((x) => {

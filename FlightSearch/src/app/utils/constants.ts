@@ -1,7 +1,6 @@
 export class Constants {
    public static labels = {
       appTitle: 'Flight Search Application',
-      apiUrl: '../assets/data/flight-data.json',
       oneWay: 'One Way',
       return: 'Return',
       provideValidInput: 'Please provide a valid input',
@@ -10,9 +9,13 @@ export class Constants {
       ruppeeSign: 'Rs:',
       bookFlight: 'Book flight',
       searchSomething: 'Please search a flight',
-      noflights: 'Sorry, no flights available'
+      noflights: 'Sorry, no flights available',
+      departure: 'Departure',
    };
    public static patterns = {
       number: /^[1-9]\d*$/
+   };
+   public static URL = {
+      apiUrl: '../assets/data/flight-data.json',
    };
 }

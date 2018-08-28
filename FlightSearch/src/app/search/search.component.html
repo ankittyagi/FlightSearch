@@ -1,8 +1,8 @@
 <div class="search_container box_shadow">
 
    <div class="tab">
-         <button class="tab_button" [class.active]="!returnJourney"  (click)="selectJourneyType()">{{labels.oneWay}}</button>
-         <button class="tab_button" [class.active]="returnJourney" (click)="selectJourneyType()">{{labels.return}}</button>
+         <button class="tab_button" [class.active]="!returnJourney"  (click)="toggleJourneyType()">{{labels.oneWay}}</button>
+         <button class="tab_button" [class.active]="returnJourney" (click)="toggleJourneyType()">{{labels.return}}</button>
    </div>
 
    <div class="search_form">

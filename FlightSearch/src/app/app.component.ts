@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { FlightSearchParameters, Flight } from './models/flights';
+import { FlightSearchParameters } from './models/flights';
 import { Constants } from './utils/constants';
 @Component({
    selector: 'app-root',

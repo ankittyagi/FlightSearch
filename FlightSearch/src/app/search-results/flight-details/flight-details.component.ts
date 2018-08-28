@@ -9,7 +9,7 @@ import { Constants } from '../../utils/constants';
 })
 export class FlightDetailsComponent {
 
-   @Input() onwardFlight: Flight;
+   @Input() forwardFlight: Flight;
    @Input() returnFlight: Flight;
    @Input() numberOfPassengers: number;
    labels = Constants.labels;

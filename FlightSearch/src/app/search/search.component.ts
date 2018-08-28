@@ -30,13 +30,13 @@ export class SearchComponent implements OnInit {
 
    ngOnInit() {
       this.flightService.getCities().then(cities => {
-         this.totalCities = cities;
-         this.departureCities = this.totalCities;
-         this.destinationCities = this.totalCities;
+         this.totalCities = [...cities];
+         this.departureCities = [...cities];
+         this.destinationCities = [...cities];
       });
    }
 
-   selectJourneyType() {
+   toggleJourneyType() {
       this.returnJourney = !this.returnJourney;
       this.booking.return = this.returnJourney;
    }
@@ -92,15 +92,14 @@ export class SearchComponent implements OnInit {
       return this.flightService.searchFlights(booking, this.amountLimitValue)
          .then((data: FlightSearchParameters) => {
             return data;
-         })
-         .catch(e => {
-            return Promise.reject(new Array<Flight>());
          });
    }
 
    changeRangeValue(value) {
       this.amountLimitValue = value ? value : MAX_LIMIT / 2;
-      this.searchFlights();
+      if (this.booking.departureCity && this.booking.destinationCity && this.booking.departureDate && this.booking.numberOfPassengers) {
+         this.searchFlights();
+      }
    }
 
 }

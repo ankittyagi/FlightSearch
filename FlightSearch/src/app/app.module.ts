@@ -11,6 +11,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { FlightDetailsComponent } from './search-results/flight-details/flight-details.component';
 
 import { FlightService } from './services/flight.service';
+import { ApiService } from './services/api.service';
 
 @NgModule({
    declarations: [
@@ -25,7 +26,7 @@ import { FlightService } from './services/flight.service';
       HttpModule,
       SharedModule
    ],
-   providers: [FlightService],
+   providers: [FlightService, ApiService],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,9 +3,15 @@ import { Directive, HostListener, Input } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Constants } from './../../utils/constants';
 
+/**
+* Directive for input number validation
+* Value must be greater than 0
+*/
+
 @Directive({
    selector: '[appValidateInput]'
 })
+
 export class ValidateInputDirective {
    @Input() validateFor: string;
    @Input() ngModel;

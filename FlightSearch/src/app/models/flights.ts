@@ -14,7 +14,7 @@ interface ArrivalDepartureTime {
 
 export interface FlightSearchParameters {
    booking: Booking;
-   onwardFlights: Flight[];
+   forwardFlights: Flight[];
    returnFlights?: Flight[];
    return: Boolean;
    limit: number;
