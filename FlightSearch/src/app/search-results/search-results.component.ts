@@ -21,7 +21,6 @@ export class SearchResultsComponent implements OnChanges {
    constructor() {}
 
    ngOnChanges() {
-      console.log(this.flightSearchParameters);
       this.departureCity = this.flightSearchParameters ? this.flightSearchParameters.booking.departureCity : '';
       this.destinationCity = this.flightSearchParameters ? this.flightSearchParameters.booking.destinationCity : '';
       this.departureDate = this.flightSearchParameters ? this.flightSearchParameters.booking.departureDate : '';

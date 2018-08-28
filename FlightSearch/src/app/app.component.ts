@@ -14,7 +14,7 @@ export class AppComponent {
 
    constructor() { }
 
-   setFlightSearch(data: FlightSearchParameters) {
-      this.flightSearchParameters = { ...data };
+   setFlightSearch(flightSearchParam: FlightSearchParameters) {
+      this.flightSearchParameters = flightSearchParam;
    }
 }
