@@ -20,6 +20,8 @@ export class SearchComponent implements OnInit {
    invalidForm = false;
    amountLimitValue = MAX_LIMIT / 2;
    labels = Constants.labels;
+   showdepartureCities: Boolean = false;
+   showdestinationCities: Boolean = false;
 
    constructor(private flightService: FlightService) {
       this.booking = {
@@ -48,6 +50,7 @@ export class SearchComponent implements OnInit {
       } else {
          this.booking.departureCity = null;
       }
+      this.showdepartureCities = false;
    }
 
    selectDestinationCity(city) {
@@ -57,13 +60,16 @@ export class SearchComponent implements OnInit {
       } else {
          this.booking.destinationCity = null;
       }
+      this.showdestinationCities = false;
    }
 
    emptyDestinationCity() {
+      this.showdestinationCities = true;
       this.booking.destinationCity = null;
       this.departureCities = this.totalCities.slice();
    }
    emptyDepartureCity() {
+      this.showdepartureCities = true;
       this.booking.departureCity = null;
       this.destinationCities = this.totalCities.slice();
    }

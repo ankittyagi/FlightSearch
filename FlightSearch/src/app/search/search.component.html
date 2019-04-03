@@ -12,11 +12,17 @@
 
             <input autocomplete="off" (keyup)="selectDepartureCity($event.target.value)" list="departureCitiesList" type="text" 
                class="form-control" required #departureCity="ngModel" placeholder="Enter departure City" id="departureCity" 
-               [(ngModel)]="booking.departureCity"  (focus)="emptyDepartureCity()" (blur)="selectDepartureCity($event.target.value)" 
+               [(ngModel)]="booking.departureCity"  (focus)="emptyDepartureCity()"
                name="departureCity" />
-            <datalist id="departureCitiesList">
+            <!-- <datalist id="departureCitiesList">
                   <option *ngFor="let city of departureCities" [value]="city">
-            </datalist>
+            </datalist> -->
+
+            <div class="suggestion" *ngIf="showdepartureCities">
+               <ul>
+               <li (click)="selectDepartureCity(city)" *ngFor="let city of departureCities">{{city}}</li>
+               </ul>
+            </div>
             <div *ngIf="departureCity.invalid && (departureCity.dirty || departureCity.touched)" class="validation-message">
                <span class="error">{{labels.provideValidInput}}</span>
             </div>
@@ -26,9 +32,15 @@
             <input autocomplete="off"  (keyup)="selectDestinationCity($event.target.value)" list="destinationCitiesList" type="text"
                class="form-control" required #destinationCity="ngModel" name="destinationCity" placeholder="Enter destination City"
                id="destinationCity" [(ngModel)]="booking.destinationCity" (focus)="emptyDestinationCity()"/>
-            <datalist id="destinationCitiesList" >
+            <!-- <datalist id="destinationCitiesList" >
                <option *ngFor="let city of destinationCities" [value]="city">
-            </datalist>
+            </datalist> -->
+
+            <div class="suggestion" *ngIf="showdestinationCities">
+               <ul>
+               <li (click)="selectDestinationCity(city)" *ngFor="let city of destinationCities">{{city}}</li>
+               </ul>
+            </div>
             <div *ngIf="destinationCity.invalid && (destinationCity.dirty || destinationCity.touched)" class="validation-message">
                <span class="error">{{labels.provideValidInput}}</span>
             </div>
