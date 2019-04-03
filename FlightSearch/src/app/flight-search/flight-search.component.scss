@@ -1,0 +1,22 @@
+@import '../../styles/style.scss';
+
+.container {
+   .row {
+      @include flexbox();
+      @include flex-direction(column);
+      .col {
+         @include flex(2);
+      }
+      .right {
+         @include flex(6);
+      }
+   }
+}
+
+@media (min-width: $media-sm) {
+   .container {
+      .row {
+         @include flex-direction(row);
+      }
+   }
+}

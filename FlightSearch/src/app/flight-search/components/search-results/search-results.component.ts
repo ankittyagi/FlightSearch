@@ -1,8 +1,7 @@
 
-import { Flight } from './../models/flights';
+import { Flight, FlightSearchParameters } from '../../models/flights';
 import { Component, Input, OnChanges } from '@angular/core';
-import { FlightSearchParameters } from '../models/flights';
-import { Constants } from './../utils/constants';
+import { Constants } from './../../../utils/constants';
 @Component({
    selector: 'app-search-results',
    templateUrl: './search-results.component.html',

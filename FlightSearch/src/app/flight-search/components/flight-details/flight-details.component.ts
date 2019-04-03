@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Flight } from '../../models/flights';
-import { Constants } from '../../utils/constants';
+import { Constants } from '../../../utils/constants';
 
 @Component({
    selector: 'app-flight-details',

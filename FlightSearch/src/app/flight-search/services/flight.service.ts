@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Flight, FlightSearchParameters } from '../models/flights';
 import { Booking } from '../models/booking';
 import 'rxjs/add/operator/toPromise';
-import { Constants } from '../utils/constants';
-import { ApiService } from './api.service';
+import { Constants } from '../../utils/constants';
+import { ApiService } from '../../core/services/api.service';
 
 @Injectable()
 export class FlightService {

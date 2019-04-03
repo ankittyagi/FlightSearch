@@ -2,9 +2,9 @@
 
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Flight } from './../models/flights';
+import { Flight } from '../../flight-search/models/flights';
 import 'rxjs/add/operator/toPromise';
-import { Constants } from './../utils/constants';
+import { Constants } from '../../utils/constants';
 
 /**
 * API service to make all http calls through app

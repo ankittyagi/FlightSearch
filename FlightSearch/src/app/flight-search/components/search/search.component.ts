@@ -1,9 +1,9 @@
 
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Booking } from '../models/booking';
-import { Flight, FlightSearchParameters } from '../models/flights';
-import { FlightService } from '../services/flight.service';
-import { Constants } from '../utils/constants';
+import { Booking } from '../../models/booking';
+import { Flight, FlightSearchParameters } from '../../models/flights';
+import { FlightService } from '../../services/flight.service';
+import { Constants } from '../../../utils/constants';
 const MAX_LIMIT = 10000;
 @Component({
    selector: 'app-search',
@@ -97,6 +97,7 @@ export class SearchComponent implements OnInit {
    private performSearch(booking: Booking) {
       return this.flightService.searchFlights(booking, this.amountLimitValue)
          .then((data: FlightSearchParameters) => {
+            console.log(data);
             return data;
          });
    }

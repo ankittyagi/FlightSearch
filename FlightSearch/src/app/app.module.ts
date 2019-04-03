@@ -2,31 +2,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
-import { FlightDetailsComponent } from './search-results/flight-details/flight-details.component';
+import { HeaderComponent } from './core/components/header.component';
 
-import { FlightService } from './services/flight.service';
-import { ApiService } from './services/api.service';
+import { FlightSearchModule } from './flight-search/flight-search.module';
+
 
 @NgModule({
    declarations: [
-      AppComponent,
-      SearchComponent,
-      SearchResultsComponent,
-      FlightDetailsComponent
+      AppComponent, HeaderComponent
    ],
    imports: [
       BrowserModule,
       FormsModule,
-      HttpModule,
-      SharedModule
+      FlightSearchModule
    ],
-   providers: [FlightService, ApiService],
+   providers: [],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

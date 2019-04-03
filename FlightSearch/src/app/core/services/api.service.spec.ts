@@ -1,9 +1,9 @@
-import { Constants } from './../utils/constants';
+import { Constants } from '../../utils/constants';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { ApiService } from './api.service';
 import { TestBed, inject } from '@angular/core/testing';
 import { Http, HttpModule, XHRBackend, BaseRequestOptions,
-   RequestMethod, Response, ResponseOptions } from '../../../node_modules/@angular/http';
+   RequestMethod, Response, ResponseOptions } from '@angular/http';
 
 const mockFlightResponse = {
    flights: [

@@ -1,4 +1,4 @@
-import { ApiService } from './api.service';
+import { ApiService } from '../../core/services/api.service';
 import { Booking } from './../models/booking';
 import { TestBed } from '@angular/core/testing';
 import { FlightService } from './flight.service';

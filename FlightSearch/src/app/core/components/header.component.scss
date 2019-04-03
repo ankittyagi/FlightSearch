@@ -1,0 +1,12 @@
+@import '../../../styles/style.scss';
+
+header {
+   padding: 20px 0px 20px 20px;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+   background: $color-Blue;
+   color: $color-White;
+   h1 {
+      display: inline;
+      font-size: $font-xxlg;
+   }
+}

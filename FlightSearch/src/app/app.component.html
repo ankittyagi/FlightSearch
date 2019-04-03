@@ -1,15 +1,4 @@
-<header>
-   <h1>{{title}}</h1>
-</header>
-<div class="container">
-   <div class="row">
-      <div class="col left">
-         <app-search (flightSearchParameters)="setFlightSearch($event)" ></app-search>
-      </div>
-      <div class="col right">
-         <app-search-results [flightSearchParameters]="flightSearchParameters"></app-search-results>
-      </div>
-   </div>
-</div>
+<app-header></app-header>
+<app-flight-search></app-flight-search>
 
 
